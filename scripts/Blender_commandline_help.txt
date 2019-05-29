@@ -1,0 +1,47 @@
+ $ blender --help
+Usage: blender [options ...] [file]
+
+Render options:
+<b>  -b &lt;file&gt;    Render &lt;file&gt; in background</b>
+    -S &lt;name&gt;    Set scene &lt;name&gt;
+  <b>  -f &lt;frame&gt;    Render frame &lt;frame&gt; and save it</b>
+    -s &lt;frame&gt;    Set start to frame &lt;frame&gt; (use with -a)
+    -e &lt;frame&gt;    Set end to frame (use with -a)&lt;frame&gt;
+    <b>-o &lt;path&gt;    Set the render path and file name.</b>
+      Use // at the start of the path to
+        render relative to the blend file.
+      The frame number will be added at the end of the filename.
+      eg: blender -b foobar.blend -o //render_ -F PNG -x 1
+  <b>  -F &lt;format&gt;    Set the render format</b>, Valid options are..
+        TGA IRIS HAMX FTYPE JPEG MOVIE IRIZ RAWTGA
+        AVIRAW AVIJPEG PNG BMP FRAMESERVER
+    (formats that can be compiled into blender, not available on all systems)
+        HDR TIFF EXR MPEG AVICODEC QUICKTIME CINEON DPX
+    -x &lt;bool&gt;    Set option to add the file extension to the end of the file.
+    -t &lt;threads&gt;    Use amount of &lt;threads&gt; for rendering
+
+Animation options:
+  -a &lt;file(s)&gt;    Playback &lt;file(s)&gt;
+    -p &lt;sx&gt; &lt;sy&gt;    Open with lower left corner at &lt;sx&gt;, &lt;sy&gt;
+    -m        Read from disk (Don't buffer)
+
+Window options:
+  -w        Force opening with borders (default)
+  -W        Force opening without borders
+  -p &lt;sx&gt; &lt;sy&gt; &lt;w&gt; &lt;h&gt;    Open with lower left corner at &lt;sx&gt;, &lt;sy&gt;
+                          and width and height &lt;w&gt;, &lt;h&gt;
+
+Game Engine specific options:
+  -g fixedtime        Run on 50 hertz without dropping frames
+  -g vertexarrays    Use Vertex Arrays for rendering (usually faster)
+  -g noaudio        No audio in Game Engine
+  -g nomipmap        No Texture Mipmapping
+  -g linearmipmap    Linear Texture Mipmapping instead of Nearest (default)
+
+Misc options:
+  -d        Turn debugging on
+  -noaudio    Disable audio on systems that support audio
+  -h        Print this help text
+  -y        Disable script links, use -Y to find out why its -y
+  -P &lt;filename&gt;    Run the given Python script (filename or Blender Text)
+  -v        Print Blender version and exit
